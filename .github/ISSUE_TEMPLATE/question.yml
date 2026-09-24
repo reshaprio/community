@@ -1,0 +1,16 @@
+name: Question
+description: Ask something about the reShapr community, governance, or this repo
+title: "[Question]: "
+labels:
+  - question
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For faster real-time help, consider [Discord](https://discord.gg/KyDUdam34h) instead. Use this if you'd like a durable, searchable answer.
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true

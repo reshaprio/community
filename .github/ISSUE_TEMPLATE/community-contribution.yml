@@ -1,0 +1,43 @@
+name: Propose a community contribution
+description: Add an install guide, tool, or integration to community-contributions/
+title: "[Contribution]: "
+labels:
+  - community-contributions
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for offering to contribute! This is for community-maintained content under [`community-contributions/`](../../community-contributions) — not officially supported by the core reShapr maintainers.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - install (deployment guide)
+        - tools
+        - integrations
+        - other / not sure
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: The platform, tool, or integration this covers (e.g. "AWS EKS", "Cursor")
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What is this and why is it useful?
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I understand this will be marked as community-maintained, not officially supported
+          required: true
+        - label: I'm willing to open a pull request with a README for this
+          required: false
